@@ -1,0 +1,100 @@
+.about-page {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #333;
+  padding: 20px;
+}
+
+/* Контент "О нас" */
+.about-content {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+/* Текстовая секция */
+.text-section {
+  flex: 1;
+  padding: 40px;
+  position: relative;
+}
+
+.text-section h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.text-section p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+/* 🔥 Анимация скрытия текста */
+.text-section .hidden-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.text-section .expanded {
+  max-height: 500px; /* ✅ Увеличиваем высоту при открытии */
+}
+
+/* 📌 Кнопка "Читать больше" */
+.toggle-btn {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+  background: #b71c1c;
+}
+
+/* Блок с изображением */
+.image-section {
+  flex: 1;
+  text-align: center;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Футер */
+footer {
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* 📱 Адаптация для мобильных */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-section {
+    order: -1; /* ✅ Перемещаем картинку вверх */
+  }
+
+  .toggle-btn {
+    width: 100%;
+  }
+}

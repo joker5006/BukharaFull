@@ -1,0 +1,15 @@
+.not-found-container {
+    text-align: center;
+    margin: 35px 0;
+  }
+  
+  .not-found-container h2 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .not-found-container p {
+    color: #777;
+    font-size: 16px;
+  }
+  

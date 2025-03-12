@@ -1,0 +1,66 @@
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff6f61);
+  color: white;
+  padding: 100px;
+  text-align: left;
+  border-radius: 10px;
+  margin: 20px;
+  gap: 20px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 80%;
+}
+
+.hero h1 {
+  font-size: 56px; /* ✅ Сделал заголовок больше */
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.hero p {
+  font-size: 24px; /* ✅ Увеличил текст */
+}
+
+.hero .bold {
+  font-weight: bold;
+  font-size: 26px; /* ✅ Увеличил жирный текст */
+}
+
+/* 📌 Анимация AOS для кровати */
+.hero-image {
+  flex: 1;
+  max-width: 45%;
+  height: auto;
+}
+
+/* 📱 Адаптация для мобильных */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero-text {
+    max-width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 40px; /* ✅ Сделал заголовок побольше на мобилке */
+  }
+
+  .hero p,
+  .hero .bold {
+    font-size: 18px; /* ✅ Чуть увеличил текст на мобилке */
+  }
+
+  .hero-image {
+    max-width: 80%;
+  }
+}

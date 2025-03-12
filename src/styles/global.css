@@ -1,0 +1,76 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* Универсальные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+
+}
+/* 📌 Улучшенный адаптивный контейнер */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 📌 Улучшаем адаптивность секций */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 📌 Медиа-запросы для планшетов */
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-section img {
+    width: 80%; /* Чтобы картинка не была слишком маленькой */
+  }
+}
+
+/* 📌 Медиа-запросы для телефонов */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 22px; /* Уменьшаем размер заголовков */
+  }
+
+  .text-section p {
+    font-size: 16px;
+  }
+
+  .image-section img {
+    width: 100%; /* Чтобы изображение занимало всю ширину */
+  }
+}
+
+/* 📌 Медиа-запросы для очень маленьких экранов */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .text-section p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+}

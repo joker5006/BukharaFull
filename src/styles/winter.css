@@ -1,0 +1,101 @@
+.home-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .hero-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #5c6b87;
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  
+  .banner-content h2 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .banner-info {
+    max-width: 400px;
+  }
+  
+  .banner-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .banner-info .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    color: #333;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .banner-image {
+    flex: 1;
+    max-width: 45%;
+    height: auto;
+    display: block;
+    margin: -60px auto -60px auto; /* ❗️ Делаем выход вверх и вниз */
+    position: absolute; /* ❗️ Фиксируем, чтобы точно вышло за границы */
+    left: 25%;
+    top: -5%;
+    transform: translate(-50%, -50%); /* Центрируем */
+    z-index: 1;
+  }
+  
+  .collection-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .collection-section h2 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .product-card {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .product-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    .hero-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .banner-image {
+      display: none;
+    }
+  
+    .banner-info {
+      max-width: 90%;
+      margin-top: 20px;
+    }
+  }

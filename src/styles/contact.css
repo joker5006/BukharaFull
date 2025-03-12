@@ -1,0 +1,120 @@
+.contact-page {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  max-width: 1200px;
+  background: #f9f9f9;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* Контейнер формы и карты */
+.contact-content {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+/* Левая часть (форма) */
+.form-section {
+  flex: 1;
+}
+
+.form-section h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Поля ввода */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Кнопка */
+button {
+  padding: 12px;
+  background: #d32f2f;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #a02828;
+}
+
+/* Правая часть (карта) */
+.map-section {
+  flex: 1;
+  text-align: center;
+}
+
+.map-section img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 📱 Адаптация для мобильных */
+@media (max-width: 1024px) {
+  .contact-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .map-section img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 15px;
+  }
+
+  .form-section h1 {
+    font-size: 22px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-section h1 {
+    font-size: 20px;
+  }
+
+  .map-section img {
+    height: 250px;
+  }
+}

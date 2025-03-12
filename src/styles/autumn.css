@@ -1,0 +1,66 @@
+/* Баннер */
+.hero-banner.autumn-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #4527a0, #6a1b9a);
+  padding: 50px;
+  border-radius: 15px;
+  color: white;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+/* Контейнер для текста */
+.banner-content {
+  flex: 1;
+  text-align: left;
+}
+
+/* Контейнер для информации справа */
+.banner-info {
+  flex: 1;
+  text-align: right;
+  max-width: 400px;
+}
+
+/* ✅ Кровать по центру с выходом за баннер */
+.banner-image {
+  flex: 1;
+  max-width: 45%;
+  height: auto;
+  display: block;
+  margin: -60px auto -60px auto; /* ❗️ Делаем выход вверх и вниз */
+  position: absolute; /* ❗️ Фиксируем, чтобы точно вышло за границы */
+  left: 25%;
+  top: -5%;
+  transform: translate(-50%, -50%); /* Центрируем */
+  z-index: 1;
+}
+
+/* Кнопка */
+.hero-banner .button {
+  background: white;
+  color: #6a1b9a;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 📱 Адаптация для мобильных */
+@media (max-width: 768px) {
+  .hero-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .banner-image {
+    display: none;
+  }
+
+  .banner-info {
+    max-width: 90%;
+  }
+}
