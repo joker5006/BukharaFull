@@ -9,7 +9,9 @@ const Header = () => {
     <header>
       {/* Логотип */}
       <div className="logo">
-        <i className="fa-solid fa-bed"></i>
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          <i className="fa-solid fa-bed"></i>
+        </Link>
       </div>
 
       {/* Основное меню (скрывается на мобилках) */}
@@ -33,10 +35,18 @@ const Header = () => {
         </div>
 
         {/* Навигационные ссылки */}
-        <Link to="/" onClick={() => setMenuOpen(false)}>Главная</Link>
-        <Link to="/collection" onClick={() => setMenuOpen(false)}>Коллекции</Link>
-        <Link to="/about" onClick={() => setMenuOpen(false)}>О нас</Link>
-        <Link to="/contact" onClick={() => setMenuOpen(false)}>Контакты</Link>
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          Главная
+        </Link>
+        <Link to="/collection" onClick={() => setMenuOpen(false)}>
+          Коллекции
+        </Link>
+        <Link to="/about" onClick={() => setMenuOpen(false)}>
+          О нас
+        </Link>
+        <Link to="/contact" onClick={() => setMenuOpen(false)}>
+          Контакты
+        </Link>
       </div>
     </header>
   );
