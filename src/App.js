@@ -9,6 +9,8 @@ import ProductPage from "./pages/ProductPage";
 import About from "./pages/About"
 import "./styles/global.css";
 import Contact from "./pages/Contact";
+import AdminPanel from "./pages/Admin-panel";
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -20,7 +22,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
@@ -28,6 +30,8 @@ function App() {
         <Route path="/About" element={<About/>} />
         <Route path="/Contact" element={<Contact/>} />
         <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/admin/" element={<AdminPanel/>} />
+
       </Routes>
     </>
   );
